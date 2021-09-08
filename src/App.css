@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.list{
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px ;
+  list-style: none;
+}
+.card{
+  display: grid;
+  grid-template-columns:repeat(4,auto) ;
+  margin: 10px;
+  grid-gap:5px
+}
