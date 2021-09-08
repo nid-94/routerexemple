@@ -7,7 +7,8 @@ import Contact from './component/Contact';
 import Error from './component/Error';
 import Persons from './component/Persons';
 import Description from './component/Description';
-import Data from './PersonsData';
+import data from './PersonsData';
+
 
 
 
@@ -15,13 +16,13 @@ function App() {
   return (
     <div className="App">
       <Navigation/>
-
+      
       <Switch>
         <Route path='/home' component={Home}/>
         <Route path='/about' component={About}/>
-        <Route exact path='/persons' component={Persons}/>
         <Route path='/contact' component={Contact}/>
-        <Route path='/persons/:id' render={(props) => <Description Data={Data} {...props}/>}/>
+        <Route exact path='/persons' component={Persons}/>
+        <Route path='/persons/:id' render={(props) => <Description data={data} {...props}/>}/>
         <Route component={Error}/>
       </Switch>
       
